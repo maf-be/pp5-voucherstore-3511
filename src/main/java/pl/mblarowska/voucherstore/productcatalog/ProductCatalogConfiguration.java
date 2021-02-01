@@ -9,12 +9,18 @@ import java.math.BigDecimal;
 public class ProductCatalogConfiguration {
 
     public ProductCatalogFacade productCatalogFacade() {
-        return new ProductCatalogFacade();
+        return new ProductCatalogFacade(new HashMapProductStorage());
     }
 
     @Bean
-    public ProductCatalogFacade fixturesAwareProductCatalogFacade() {
-        ProductCatalogFacade productCatalogFacade = new ProductCatalogFacade();
+    public ProductStorage productionProductStorage() {
+        return new HashMapProductStorage();
+//        return new JDBCProductStorage("mysql://localhost:3306/voucher-shop");
+    }
+
+    @Bean
+    public ProductCatalogFacade fixturesAwareProductCatalogFacade(ProductStorage productStorage) {
+        ProductCatalogFacade productCatalogFacade = new ProductCatalogFacade(productStorage);
 
         String p1 = productCatalogFacade.createProduct();
         productCatalogFacade.applyPrice(p1, BigDecimal.valueOf(20.20));
