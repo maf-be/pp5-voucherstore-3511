@@ -1,4 +1,4 @@
-package pl.mblarowska.voucherstore.sales;
+package pl.mblarowska.voucherstore.sales.basket;
 
 import java.util.Map;
 import java.util.Optional;

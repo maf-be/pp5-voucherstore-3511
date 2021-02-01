@@ -1,6 +1,7 @@
-package pl.mblarowska.voucherstore.sales;
+package pl.mblarowska.voucherstore.sales.basket;
 
 import pl.mblarowska.voucherstore.productcatalog.Product;
+import pl.mblarowska.voucherstore.sales.Inventory;
 import pl.mblarowska.voucherstore.sales.exceptions.NotEnoughProductsException;
 
 import java.util.*;
