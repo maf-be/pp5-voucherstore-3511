@@ -1,6 +1,8 @@
 package pl.mblarowska.voucherstore.sales.offer;
 
 import pl.mblarowska.voucherstore.sales.basket.BasketLine;
+import pl.mblarowska.voucherstore.sales.product.ProductDetails;
+import pl.mblarowska.voucherstore.sales.product.ProductDetailsProvider;
 
 import java.math.BigDecimal;
 import java.util.List;

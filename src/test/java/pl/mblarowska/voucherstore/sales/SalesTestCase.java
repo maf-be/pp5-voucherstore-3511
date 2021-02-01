@@ -5,7 +5,7 @@ import pl.mblarowska.voucherstore.productcatalog.ProductCatalogConfiguration;
 import pl.mblarowska.voucherstore.productcatalog.ProductCatalogFacade;
 import pl.mblarowska.voucherstore.sales.basket.InMemoryBasketStorage;
 import pl.mblarowska.voucherstore.sales.offer.OfferMaker;
-import pl.mblarowska.voucherstore.sales.offer.ProductDetails;
+import pl.mblarowska.voucherstore.sales.product.ProductDetails;
 
 import java.math.BigDecimal;
 import java.util.UUID;
