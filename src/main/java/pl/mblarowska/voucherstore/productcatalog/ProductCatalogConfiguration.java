@@ -37,5 +37,13 @@ public class ProductCatalogConfiguration {
         return productCatalogFacade;
     }
 
-
+//    @Bean
+//    DataSource myDataSource() {
+//        return new EmbeddedDatabaseBuilder()
+//                .setType(EmbeddedDatabaseType.H2)
+//                .addScript("classpath:jdbc/schema.sql")
+//                .addScript("classpath:jdbc/initial-data.sql")
+//                .build()
+//        ;
+//    }
 }
