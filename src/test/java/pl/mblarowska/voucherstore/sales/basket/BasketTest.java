@@ -1,11 +1,13 @@
-package pl.mblarowska.voucherstore.sales;
+package pl.mblarowska.voucherstore.sales.basket;
 
 import org.junit.Test;
 import pl.mblarowska.voucherstore.productcatalog.Product;
+import pl.mblarowska.voucherstore.sales.Inventory;
 
 import java.util.UUID;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class BasketTest {
 
