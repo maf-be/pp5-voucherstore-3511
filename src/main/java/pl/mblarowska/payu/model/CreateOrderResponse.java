@@ -1,4 +1,4 @@
-package pl.mblarowska.payu;
+package pl.mblarowska.payu.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

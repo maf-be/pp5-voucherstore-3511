@@ -1,6 +1,12 @@
 package pl.mblarowska.payu;
 
 import org.junit.Test;
+import pl.mblarowska.payu.exceptions.PayUException;
+import pl.mblarowska.payu.http.JavaHttpPayUApiClient;
+import pl.mblarowska.payu.model.Buyer;
+import pl.mblarowska.payu.model.CreateOrderResponse;
+import pl.mblarowska.payu.model.OrderCreateRequest;
+import pl.mblarowska.payu.model.Product;
 
 import java.util.Arrays;
 import java.util.UUID;
