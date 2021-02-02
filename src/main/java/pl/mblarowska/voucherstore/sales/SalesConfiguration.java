@@ -2,6 +2,9 @@ package pl.mblarowska.voucherstore.sales;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import pl.mblarowska.payu.JavaHttpPayUApiClient;
+import pl.mblarowska.payu.PayU;
+import pl.mblarowska.payu.PayUCredentials;
 import pl.mblarowska.voucherstore.productcatalog.ProductCatalogFacade;
 import pl.mblarowska.voucherstore.sales.basket.InMemoryBasketStorage;
 import pl.mblarowska.voucherstore.sales.offer.OfferMaker;
@@ -12,14 +15,23 @@ import pl.mblarowska.voucherstore.sales.product.ProductDetailsProvider;
 public class SalesConfiguration {
 
     @Bean
-    SalesFacade salesFacade(ProductCatalogFacade productCatalogFacade, OfferMaker offerMaker) {
+    SalesFacade salesFacade(ProductCatalogFacade productCatalogFacade, OfferMaker offerMaker, PaymentGateway paymentGateway) {
         return new SalesFacade(
                 productCatalogFacade,
                 new InMemoryBasketStorage(),
                 () -> "customer_1",
                 (productId) -> true,
-                offerMaker
+                offerMaker,
+                paymentGateway
         );
+    }
+
+    @Bean
+    PaymentGateway payUPaymentGateway() {
+        return new PayUPaymentGateway(new PayU(
+                PayUCredentials.sandbox(),
+                new JavaHttpPayUApiClient()
+        ));
     }
 
     @Bean
