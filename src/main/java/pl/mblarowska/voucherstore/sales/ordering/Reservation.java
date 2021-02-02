@@ -1,4 +1,4 @@
-package pl.mblarowska.voucherstore.sales;
+package pl.mblarowska.voucherstore.sales.ordering;
 
 import pl.mblarowska.voucherstore.sales.offer.Offer;
 

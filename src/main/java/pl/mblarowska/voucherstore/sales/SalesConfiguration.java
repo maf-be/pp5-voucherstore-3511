@@ -8,6 +8,8 @@ import pl.mblarowska.payu.PayUCredentials;
 import pl.mblarowska.voucherstore.productcatalog.ProductCatalogFacade;
 import pl.mblarowska.voucherstore.sales.basket.InMemoryBasketStorage;
 import pl.mblarowska.voucherstore.sales.offer.OfferMaker;
+import pl.mblarowska.voucherstore.sales.payment.PayUPaymentGateway;
+import pl.mblarowska.voucherstore.sales.payment.PaymentGateway;
 import pl.mblarowska.voucherstore.sales.product.ProductCatalogProductDetailsProvider;
 import pl.mblarowska.voucherstore.sales.product.ProductDetailsProvider;
 
