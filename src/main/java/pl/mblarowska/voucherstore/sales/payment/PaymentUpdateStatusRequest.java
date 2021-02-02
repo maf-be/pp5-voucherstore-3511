@@ -1,4 +1,4 @@
-package pl.mblarowska.voucherstore.sales;
+package pl.mblarowska.voucherstore.sales.payment;
 
 import lombok.Getter;
 
